@@ -9,7 +9,7 @@ Official implementation of V-Co, a systematic study of visual co-denoising withi
 
 
 <p align="center">
-  <img src="assets/vco_recipe.png" width="90%">
+  <img src="assets/vco_recipe.png" width="75%">
 </p>
 
 V-Co present a principled study of visual representation alignment via co-denoising in pixel-space diffusion, systematically isolating the effects of architecture, CFG design, auxiliary losses, and feature calibration. We introduce an effective recipe for visual co-denoising with two key innovations: structural masking for unconditional CFG prediction and a perceptual-drifting hybrid loss that combines instance-level alignment with distribution-level regularization. Our study further identifies a fully dual-stream architecture and RMS-based feature calibration as the preferred design choices. These designs yield strong improvements on ImageNet-256~\cite{deng2009imagenet}, outperforming the underlying pixel-space diffusion baseline (i.e., JiT) as well as prior pixel-space diffusion methods.

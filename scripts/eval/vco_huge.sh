@@ -1,0 +1,32 @@
+torchrun --nproc_per_node=8 --nnodes=1 \
+    main_vco.py \
+    --proj_dropout 0.0 \
+    --P_mean -0.8 --P_std 0.8 \
+    --img_size 256 --noise_scale 1.0 \
+    --batch_size 16 --blr 5e-5 \
+    --epochs 600 --warmup_epochs 5 \
+    --gen_bsz 16 --num_images 50000 --interval_min 0.1 --interval_max 1.0 --eval_freq 20 \
+    --resume '/path/to/vco_huge/checkpoint-last.pth' \
+    --online_eval \
+    --model JiT-H/16-co \
+    --output_dir '/path/to/output_dir' \
+    --data_path '/path/to/imagenet/' \
+    --evaluate_gen \
+    --num_workers 12 \
+    --use_co_embed \
+    --use_dinov2 \
+    --use_dino_from_rae \
+    --use_gated_co_embed \
+    --noise_scale_dinov2 1.0 \
+    --jit_refiner_layers 0 \
+    --use_mmdit \
+    --separate_qkv \
+    --use_conv2d_dino_proj \
+    --uncond_dino_null \
+    --dinov2_null_type 'attn_mask_asymmetric' \
+    --dinov2_drop_zero_loss \
+    --class_balanced_sampling \
+    --num_classes_per_batch 1 \
+    --num_samples_per_class 16 \
+    --drifting_v3_loss \
+    --cfg_sweep '1.5'

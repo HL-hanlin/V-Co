@@ -1,0 +1,43 @@
+torchrun --nproc_per_node=8 --nnodes=1 \
+    main_vco.py \
+    --proj_dropout 0.0 \
+    --P_mean -0.8 --P_std 0.8 \
+    --img_size 256 --noise_scale 1.0 \
+    --batch_size 128 --blr 5e-5 \
+    --epochs 600 --warmup_epochs 5 \
+    --gen_bsz 128 --num_images 50000 --interval_min 0.1 --interval_max 1.0 --eval_freq 20 \
+    --auto_resume \
+    --online_eval \
+    --use_wandb \
+    --model JiT-B/16-co \
+    --output_dir '/path/to/output_dir' \
+    --wandb_entity 'your_entity' \
+    --wandb_run_name 'vco_base' \
+    --data_path '/path/to/imagenet/' \
+    --num_workers 12 \
+    --use_co_embed \
+    --use_dinov2 \
+    --use_dino_from_rae \
+    --dinov2_loss_coef 0.1 \
+    --use_gated_co_embed \
+    --noise_scale_dinov2 1.0 \
+    --jit_refiner_layers 0 \
+    --use_mmdit \
+    --separate_qkv \
+    --use_conv2d_dino_proj \
+    --label_drop_prob 0.0 \
+    --dinov2_drop_prob 0.0 \
+    --label_dinov2_drop_prob 0.1 \
+    --uncond_dino_null \
+    --dinov2_null_type 'attn_mask_asymmetric' \
+    --dinov2_drop_zero_loss \
+    --cfg 1.8 \
+    --cfg_dino 1.8 \
+    --class_balanced_sampling \
+    --num_classes_per_batch 1 \
+    --num_samples_per_class 128 \
+    --drifting_v3_loss \
+    --drifting_v3_loss_coef 10.0 \
+    --drifting_v3_feat_type 'cls' \
+    --drifting_v3_gate_tau 10 \
+    --drifting_v3_repulsion_tau 0.2

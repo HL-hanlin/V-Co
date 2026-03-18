@@ -2,7 +2,7 @@
 
 Official implementation of V-Co, a systematic study of visual co-denoising within a unified pixel-space diffusion framework.
 
-[![arXiv](https://img.shields.io/badge/ArXiv-2404.09967-orange)](https://arxiv.org/abs/2404.09967)
+[![arXiv](https://img.shields.io/badge/ArXiv-2404.09967-orange)](https://arxiv.org/pdf/2603.16792)
 [![checkpoints](https://img.shields.io/badge/Model-Checkpoints-blue)](https://huggingface.co/hanlincs/V-Co)
 
 
@@ -146,11 +146,14 @@ torchrun --nproc_per_node=8 --nnodes=1 \
 🌟 If you find our project useful in your research or application development, citing our paper would be the best support for us!
 
 ```
-@article{lin2026vco,
-  title={V-Co: A Closer Look at Visual Representation Alignment via Co-Denoising},
-  author={Lin, Han and Pan, Xichen and Wang, Zun and Zhang, Yue and Chu, Wang and Jaemin, Cho and Bansal, Mohit},
-  journal={arXiv preprint arXiv:},
-  year={2026}
+@misc{lin2026vcocloserlookvisual,
+      title={V-Co: A Closer Look at Visual Representation Alignment via Co-Denoising}, 
+      author={Han Lin and Xichen Pan and Zun Wang and Yue Zhang and Chu Wang and Jaemin Cho and Mohit Bansal},
+      year={2026},
+      eprint={2603.16792},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2603.16792}, 
 }
 ```
 

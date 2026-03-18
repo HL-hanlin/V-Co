@@ -2,7 +2,7 @@
 
 Official implementation of V-Co, a systematic study of visual co-denoising within a unified pixel-space diffusion framework.
 
-[![arXiv](https://img.shields.io/badge/ArXiv-2404.09967-orange)](https://arxiv.org/pdf/2603.16792)
+[![arXiv](https://img.shields.io/badge/ArXiv-2603.16792-orange)](https://arxiv.org/pdf/2603.16792)
 [![checkpoints](https://img.shields.io/badge/Model-Checkpoints-blue)](https://huggingface.co/hanlincs/V-Co)
 
 
